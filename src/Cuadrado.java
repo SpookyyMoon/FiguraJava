@@ -1,5 +1,16 @@
 public class Cuadrado extends Figura{
-    public Cuadrado(String color, String nombre, int posX, int posY) {
+    public int base;
+
+    public Cuadrado(String color, String nombre, int posX, int posY, int base) {
         super(color, nombre, posX, posY);
+        this.base = base;
+    }
+
+    public int getBase() {
+        return base;
+    }
+
+    public void setBase(int base) {
+        this.base = base;
     }
 }

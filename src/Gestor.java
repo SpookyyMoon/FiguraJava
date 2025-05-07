@@ -87,4 +87,54 @@ public class Gestor {
         System.out.println(trianguloLista.get(triangulo));
         trianguloLista.remove(triangulo);
     }
+
+    public void bubbleSortFiguras(){
+        for(Cuadrado cuadrado: cuadradoLista){
+            for(Cuadrado cuadrado1: cuadradoLista){
+                if(cuadrado.areaCuadrado() > cuadrado1.areaCuadrado()){
+                    Cuadrado cuadrado1Copia = cuadrado1;
+                    cuadrado1 = cuadrado;
+                    cuadrado = cuadrado1Copia;
+                }
+            }
+        }
+        System.out.println("El cuadrado con la mayor area es: \n");
+        System.out.println(cuadradoLista.getLast());
+
+        for(Rectangulo rectangulo: rectanguloLista){
+            for(Rectangulo rectangulo1: rectanguloLista){
+                if(rectangulo.areaRectangulo() > rectangulo1.areaRectangulo()){
+                    Rectangulo rectangulo1Copia = rectangulo1;
+                    rectangulo1 = rectangulo;
+                    rectangulo = rectangulo1Copia;
+                }
+            }
+        }
+        System.out.println("El rectángulo con la mayor area es: \n");
+        System.out.println(rectanguloLista.getLast());
+
+        for(Circulo circulo: circuloLista){
+            for(Circulo circulo1: circuloLista){
+                if(circulo.areaCirculo() > circulo1.areaCirculo()){
+                    Circulo circulo1Copia = circulo1;
+                    circulo1 = circulo;
+                    circulo = circulo1Copia;
+                }
+            }
+        }
+        System.out.println("El círculo con la mayor area es: \n");
+        System.out.println(circuloLista.getLast());
+
+        for(Triangulo triangulo: trianguloLista){
+            for(Triangulo triangulo1: trianguloLista){
+                if(triangulo.areaTriangulo() > triangulo1.areaTriangulo()){
+                    Triangulo triangulo1Copia = triangulo1;
+                    triangulo1 = triangulo;
+                    triangulo = triangulo1Copia;
+                }
+            }
+        }
+        System.out.println("El triángulo con la mayor area es: \n");
+        System.out.println(trianguloLista.getLast());
+    }
 }

@@ -176,7 +176,11 @@ public class Main {
                     break;
                 case 4:
                     System.out.flush();
-                    System.out.println(" == Figura con mayor area == ");
+                    System.out.println(" == Figura con mayor area == \n");
+                    gestor.bubbleSortFiguras();
+                    System.out.println("\nPulsa enter para volver...");
+                    sc.nextLine();
+                    sc.nextLine();
                     break;
                 case 5:
                     System.out.flush();

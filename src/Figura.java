@@ -42,4 +42,18 @@ public class Figura {
     public void setPosY(int posY) {
         this.posY = posY;
     }
+
+    public float calcularArea(){
+        return 0;
+    }
+
+    public float calcularPerimetro(){
+        return 0;
+    }
+
+    public void moverFigura(){
+
+    }
+
+
 }

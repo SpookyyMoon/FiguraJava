@@ -24,7 +24,7 @@ public class Rectangulo extends Figura{
         this.altura = altura;
     }
 
-    public float areaRectangulo(){
+    public float calcularArea(){
 
         return (float) (base *  altura);
     }
@@ -38,7 +38,7 @@ public class Rectangulo extends Figura{
         return  "Nombre" + nombre + "\n" +
                 "Base: " + base + "\n" +
                 "Altura: " + altura + "\n" +
-                "Area: " + areaRectangulo() + "\n" +
+                "Area: " + calcularArea() + "\n" +
                 "Perímetro: " + perimetroRectangulo() + "\n" +
                 "Color: " + color + "\n" +
                 "Posición X: " + posX + "\n" +

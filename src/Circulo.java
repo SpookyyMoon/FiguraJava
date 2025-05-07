@@ -15,11 +15,13 @@ public class Circulo extends Figura{
         this.radio = radio;
     }
 
-    public float areaCirculo(){
+    @Override
+    public float calcularArea(){
         return (float) (pi * Math.pow(radio, 2));
     }
 
-    public float perimetroCirculo(){
+    @Override
+    public float calcularPerimetro(){
         return (float) (2 * pi * radio);
     }
 
@@ -27,8 +29,8 @@ public class Circulo extends Figura{
     public String toString() {
         return  "Nombre" + nombre + "\n" +
                 "Radio: " + radio + "\n" +
-                "Area: " + areaCirculo() + "\n" +
-                "Perímetro: " + perimetroCirculo() + "\n" +
+                "Area: " + calcularArea() + "\n" +
+                "Perímetro: " + calcularPerimetro() + "\n" +
                 "Color: " + color + "\n" +
                 "Posición X: " + posX + "\n" +
                 "Posición Y: " + posY + "\n";

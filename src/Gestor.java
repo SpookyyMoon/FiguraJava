@@ -88,10 +88,10 @@ public class Gestor {
         trianguloLista.remove(triangulo);
     }
 
-    public void bubbleSortFiguras(){
+    public void bubbleSortFigurasArea(){
         for(Cuadrado cuadrado: cuadradoLista){
             for(Cuadrado cuadrado1: cuadradoLista){
-                if(cuadrado.areaCuadrado() > cuadrado1.areaCuadrado()){
+                if(cuadrado.calcularArea() > cuadrado1.calcularArea()){
                     Cuadrado cuadrado1Copia = cuadrado1;
                     cuadrado1 = cuadrado;
                     cuadrado = cuadrado1Copia;
@@ -103,7 +103,7 @@ public class Gestor {
 
         for(Rectangulo rectangulo: rectanguloLista){
             for(Rectangulo rectangulo1: rectanguloLista){
-                if(rectangulo.areaRectangulo() > rectangulo1.areaRectangulo()){
+                if(rectangulo.calcularArea() > rectangulo1.calcularArea()){
                     Rectangulo rectangulo1Copia = rectangulo1;
                     rectangulo1 = rectangulo;
                     rectangulo = rectangulo1Copia;
@@ -115,7 +115,7 @@ public class Gestor {
 
         for(Circulo circulo: circuloLista){
             for(Circulo circulo1: circuloLista){
-                if(circulo.areaCirculo() > circulo1.areaCirculo()){
+                if(circulo.calcularArea() > circulo1.calcularArea()){
                     Circulo circulo1Copia = circulo1;
                     circulo1 = circulo;
                     circulo = circulo1Copia;
@@ -127,7 +127,7 @@ public class Gestor {
 
         for(Triangulo triangulo: trianguloLista){
             for(Triangulo triangulo1: trianguloLista){
-                if(triangulo.areaTriangulo() > triangulo1.areaTriangulo()){
+                if(triangulo.calcularArea() > triangulo1.calcularArea()){
                     Triangulo triangulo1Copia = triangulo1;
                     triangulo1 = triangulo;
                     triangulo = triangulo1Copia;
@@ -135,6 +135,56 @@ public class Gestor {
             }
         }
         System.out.println("El triángulo con la mayor area es: \n");
+        System.out.println(trianguloLista.getLast());
+    }
+
+    public void bubbleSortFigurasPerimetro(){
+        for(Cuadrado cuadrado: cuadradoLista){
+            for(Cuadrado cuadrado1: cuadradoLista){
+                if(cuadrado.calcularPerimetro() > cuadrado1.calcularPerimetro()){
+                    Cuadrado cuadrado1Copia = cuadrado1;
+                    cuadrado1 = cuadrado;
+                    cuadrado = cuadrado1Copia;
+                }
+            }
+        }
+        System.out.println("El cuadrado con el mayor perímetro es: \n");
+        System.out.println(cuadradoLista.getLast());
+
+        for(Rectangulo rectangulo: rectanguloLista){
+            for(Rectangulo rectangulo1: rectanguloLista){
+                if(rectangulo.calcularPerimetro() > rectangulo1.calcularPerimetro()){
+                    Rectangulo rectangulo1Copia = rectangulo1;
+                    rectangulo1 = rectangulo;
+                    rectangulo = rectangulo1Copia;
+                }
+            }
+        }
+        System.out.println("El rectángulo con el mayor perímetro es: \n");
+        System.out.println(rectanguloLista.getLast());
+
+        for(Circulo circulo: circuloLista){
+            for(Circulo circulo1: circuloLista){
+                if(circulo.calcularPerimetro() > circulo1.calcularPerimetro()){
+                    Circulo circulo1Copia = circulo1;
+                    circulo1 = circulo;
+                    circulo = circulo1Copia;
+                }
+            }
+        }
+        System.out.println("El círculo con el mayor perímetro es: \n");
+        System.out.println(circuloLista.getLast());
+
+        for(Triangulo triangulo: trianguloLista){
+            for(Triangulo triangulo1: trianguloLista){
+                if(triangulo.calcularPerimetro() > triangulo1.calcularPerimetro()){
+                    Triangulo triangulo1Copia = triangulo1;
+                    triangulo1 = triangulo;
+                    triangulo = triangulo1Copia;
+                }
+            }
+        }
+        System.out.println("El triángulo con el mayor perímetro es: \n");
         System.out.println(trianguloLista.getLast());
     }
 }

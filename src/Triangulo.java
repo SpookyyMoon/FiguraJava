@@ -44,11 +44,13 @@ public class Triangulo extends Figura{
         this.altura = altura;
     }
 
-    public float areaTriangulo(){
+    @Override
+    public float calcularArea(){
         return (float) (base *  altura);
     }
 
-    public float perimetroTriangulo(){
+    @Override
+    public float calcularPerimetro(){
         return (float) (base + lado + lado1);
     }
 
@@ -59,8 +61,8 @@ public class Triangulo extends Figura{
                 "Altura: " + altura + "\n" +
                 "Lado: " + lado + "\n" +
                 "Lado1: " + lado1 + "\n" +
-                "Area: " + areaTriangulo() + "\n" +
-                "Perímetro: " + perimetroTriangulo() + "\n" +
+                "Area: " + calcularArea() + "\n" +
+                "Perímetro: " + calcularPerimetro() + "\n" +
                 "Color: " + color + "\n" +
                 "Posición X: " + posX + "\n" +
                 "Posición Y: " + posY + "\n";

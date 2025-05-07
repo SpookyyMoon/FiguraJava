@@ -16,7 +16,8 @@ public class Main {
             System.out.println("5. Figura con mayor perímetro");
             System.out.println("6. Listar figuras");
             System.out.println("7. Listar tipos de figuras");
-            System.out.println("\n 8. Salir");
+            System.out.println("8. ");
+            System.out.println("\n 9. Salir");
 
             opcion = sc.nextInt();
 
@@ -183,7 +184,7 @@ public class Main {
                 case 4:
                     System.out.flush();
                     System.out.println(" == Figura con mayor area == \n");
-                    gestor.bubbleSortFiguras();
+                    gestor.bubbleSortFigurasArea();
                     System.out.println("\nPulsa enter para volver...");
                     sc.nextLine();
                     sc.nextLine();
@@ -191,13 +192,32 @@ public class Main {
                 case 5:
                     System.out.flush();
                     System.out.println(" == Figura con mayor perímetro == ");
+                    gestor.bubbleSortFigurasPerimetro();
+                    System.out.println("\nPulsa enter para volver...");
+                    sc.nextLine();
+                    sc.nextLine();
                     break;
                 case 6:
+                    System.out.flush();
+                    System.out.println(" == Lista de figuras == ");
+                    System.out.println(" = Cuadrados = \n");
+                    gestor.mostrarCuadrados();
+                    System.out.println("\n = Rectángulos = \n");
+                    gestor.mostrarRectangulos();
+                    System.out.println("\n = Círculos = \n");
+                    gestor.mostrarCirculos();
+                    System.out.println("\n = Triángulos = \n");
+                    gestor.mostrarTriangulos();
+                    System.out.println("\nPulsa enter para volver...");
+                    sc.nextLine();
+                    sc.nextLine();
+                    break;
+                case 7:
                     boolean validoListar = false;
                     int opcionListar;
                     while(!validoListar){
                         System.out.flush();
-                        System.out.println(" == Lista de figuras == ");
+                        System.out.println(" == Lista de tipos de figuras == ");
                         System.out.println("1. Lista de cuadrados: ");
                         System.out.println("2. Lista de rectángulos: ");
                         System.out.println("3. Lista de círculos: ");
@@ -240,18 +260,15 @@ public class Main {
                         }
                     }
                     break;
-                case 7:
-                    System.out.flush();
-                    System.out.println(" == Lista de tipos de figuras == ");
-                    System.out.println("\n - Cuadrado");
-                    System.out.println(" - Rectángulo");
-                    System.out.println(" - Círculo");
-                    System.out.println(" - Triángulo");
-                    System.out.println("\nPulsa enter para volver...");
-                    sc.nextLine();
-                    sc.nextLine();
-                    break;
                 case 8:
+                    System.out.println(" == Mover figura == ");
+                    System.out.println("\n 1. Mover cuadrado");
+                    System.out.println("2. Mover rectángulo");
+                    System.out.println("3. Mover círculo");
+                    System.out.println("4. Mover triángulo");
+                    System.out.println("\n 5. Volver");
+                    break;
+                case 9:
                     System.out.flush();
                     System.out.println("Saliendo...");
                     System.exit(1);

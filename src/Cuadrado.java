@@ -14,11 +14,13 @@ public class Cuadrado extends Figura{
         this.base = base;
     }
 
-    public float areaCuadrado(){
+    @Override
+    public float calcularArea(){
         return (float) (base *  base);
     }
 
-    public float perimetroCuadrado(){
+    @Override
+    public float calcularPerimetro(){
         return (float) (base * 4);
     }
 
@@ -26,8 +28,8 @@ public class Cuadrado extends Figura{
     public String toString() {
         return  "Nombre" + nombre + "\n" +
                 "Base: " + base + "\n" +
-                "Area: " + areaCuadrado() + "\n" +
-                "Perímetro: " + perimetroCuadrado() + "\n" +
+                "Area: " + calcularArea() + "\n" +
+                "Perímetro: " + calcularPerimetro() + "\n" +
                 "Color: " + color + "\n" +
                 "Posición X: " + posX + "\n" +
                 "Posición Y: " + posY + "\n";

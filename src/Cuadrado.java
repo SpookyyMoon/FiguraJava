@@ -15,8 +15,11 @@ public class Cuadrado extends Figura{
     }
 
     public float areaCuadrado(){
-
         return (float) (base *  base);
+    }
+
+    public float perimetroCuadrado(){
+        return (float) (base * 4);
     }
 
     @Override
@@ -24,6 +27,7 @@ public class Cuadrado extends Figura{
         return  "Nombre" + nombre + "\n" +
                 "Base: " + base + "\n" +
                 "Area: " + areaCuadrado() + "\n" +
+                "Perímetro: " + perimetroCuadrado() + "\n" +
                 "Color: " + color + "\n" +
                 "Posición X: " + posX + "\n" +
                 "Posición Y: " + posY + "\n";

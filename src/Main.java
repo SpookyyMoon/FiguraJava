@@ -79,6 +79,8 @@ public class Main {
                                 System.out.flush();
                                 int baseTriangulo;
                                 int alturaTriangulo;
+                                int ladoTriangulo;
+                                int lado1Triangulo;
                                 System.out.println(" == Creación de triangulo == ");
                                 String colorTriangulo = insercionColorSuper(sc);
                                 String nombreTriangulo = insercionNombreSuper(sc);
@@ -87,8 +89,12 @@ public class Main {
                                 System.out.println("\nIntroduce la base del triángulo: ");
                                 baseTriangulo = sc.nextInt();
                                 System.out.println("\nIntroduce la altura del triángulo: ");
+                                ladoTriangulo = sc.nextInt();
+                                System.out.println("\nIntroduce la longitud del lado del triángulo: ");
+                                lado1Triangulo = sc.nextInt();
+                                System.out.println("\nIntroduce la longitud del lado1 del triángulo: ");
                                 alturaTriangulo = sc.nextInt();
-                                gestor.crearTriangulo(colorTriangulo, nombreTriangulo, posicionXTriangulo, posicionYTriangulo, baseTriangulo, alturaTriangulo);
+                                gestor.crearTriangulo(colorTriangulo, nombreTriangulo, posicionXTriangulo, posicionYTriangulo, baseTriangulo, alturaTriangulo, ladoTriangulo, lado1Triangulo);
                                 break;
                             case 5:
                                 validoCrear = true;

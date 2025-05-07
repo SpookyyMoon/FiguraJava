@@ -1,5 +1,6 @@
 public class Circulo extends Figura{
     public int radio;
+    double pi = 3.141592;
 
     public Circulo(String color, String nombre, int posX, int posY, int radio) {
         super(color, nombre, posX, posY);
@@ -15,8 +16,11 @@ public class Circulo extends Figura{
     }
 
     public float areaCirculo(){
-        double pi = 3.141592;
         return (float) (pi * Math.pow(radio, 2));
+    }
+
+    public float perimetroCirculo(){
+        return (float) (2 * pi * radio);
     }
 
     @Override
@@ -24,6 +28,7 @@ public class Circulo extends Figura{
         return  "Nombre" + nombre + "\n" +
                 "Radio: " + radio + "\n" +
                 "Area: " + areaCirculo() + "\n" +
+                "Perímetro: " + perimetroCirculo() + "\n" +
                 "Color: " + color + "\n" +
                 "Posición X: " + posX + "\n" +
                 "Posición Y: " + posY + "\n";

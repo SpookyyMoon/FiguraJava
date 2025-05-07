@@ -30,8 +30,8 @@ public class Gestor {
         System.out.println(circuloLista.getLast());
     }
 
-    public void crearTriangulo(String color, String nombre, int X, int Y, int base, int altura){
-        trianguloLista.add(new Triangulo(color, nombre, X, Y, base, altura));
+    public void crearTriangulo(String color, String nombre, int X, int Y, int base, int altura, int lado, int lado1){
+        trianguloLista.add(new Triangulo(color, nombre, X, Y, base, altura, lado, lado1));
         System.out.println("Se ha creado el triángulo: ");
         System.out.println(trianguloLista.getLast());
     }

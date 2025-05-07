@@ -23,4 +23,20 @@ public class Triangulo extends Figura{
     public void setAltura(int altura) {
         this.altura = altura;
     }
+
+    public float areaTriangulo(){
+
+        return (float) (base *  altura);
+    }
+
+    @Override
+    public String toString() {
+        return  "Nombre" + nombre + "\n" +
+                "Base: " + base + "\n" +
+                "Altura: " + altura + "\n" +
+                "Area: " + areaTriangulo() + "\n" +
+                "Color: " + color + "\n" +
+                "Posición X: " + posX + "\n" +
+                "Posición Y: " + posY + "\n";
+    }
 }

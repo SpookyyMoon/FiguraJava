@@ -14,11 +14,17 @@ public class Circulo extends Figura{
         this.radio = radio;
     }
 
+    public float areaCirculo(){
+        double pi = 3.141592;
+        return (float) (pi * Math.pow(radio, 2));
+    }
+
     @Override
     public String toString() {
-        return  "Nombre" + posX + "\n" +
-                "Radio: " + posX + "\n" +
-                "Color: " + posX + "\n" +
+        return  "Nombre" + nombre + "\n" +
+                "Radio: " + radio + "\n" +
+                "Area: " + areaCirculo() + "\n" +
+                "Color: " + color + "\n" +
                 "Posición X: " + posX + "\n" +
                 "Posición Y: " + posY + "\n";
     }

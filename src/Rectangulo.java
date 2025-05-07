@@ -23,4 +23,14 @@ public class Rectangulo extends Figura{
     public void setAltura(int altura) {
         this.altura = altura;
     }
+
+    @Override
+    public String toString() {
+        return  "Nombre" + posX + "\n" +
+                "Base: " + posX + "\n" +
+                "Altura: " + posY + "\n" +
+                "Color: " + posX + "\n" +
+                "Posición X: " + posX + "\n" +
+                "Posición Y: " + posY + "\n";
+    }
 }

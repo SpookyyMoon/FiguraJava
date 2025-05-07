@@ -13,4 +13,13 @@ public class Cuadrado extends Figura{
     public void setBase(int base) {
         this.base = base;
     }
+
+    @Override
+    public String toString() {
+        return  "Nombre" + posX + "\n" +
+                "Base: " + posX + "\n" +
+                "Color: " + posX + "\n" +
+                "Posición X: " + posX + "\n" +
+                "Posición Y: " + posY + "\n";
+    }
 }

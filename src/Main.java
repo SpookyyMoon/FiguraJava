@@ -37,12 +37,58 @@ public class Main {
 
                         switch (opcionCreacion){
                             case 1:
+                                System.out.flush();
+                                int baseCuadrado;
+                                System.out.println(" == Creación de cuadrado == ");
+                                String colorCuadrado = insercionColorSuper(sc);
+                                String nombreCuadrado = insercionNombreSuper(sc);
+                                int posicionXCuadrado = insercionXSuper(sc);
+                                int posicionYCuadrado = insercionYSuper(sc);
+                                System.out.println("\nIntroduce la base del cudrado: ");
+                                baseCuadrado = sc.nextInt();
+                                gestor.crearCuadrado(colorCuadrado, nombreCuadrado, posicionXCuadrado, posicionYCuadrado, baseCuadrado);
                                 break;
                             case 2:
+                                System.out.flush();
+                                int baseRectangulo;
+                                int alturaRectangulo;
+                                System.out.println(" == Creación de rectangulo == ");
+                                String colorRectangulo = insercionColorSuper(sc);
+                                String nombreRectangulo = insercionNombreSuper(sc);
+                                int posicionXRectangulo = insercionXSuper(sc);
+                                int posicionYRectangulo = insercionYSuper(sc);
+                                System.out.println("\nIntroduce la base del rectángulo: ");
+                                baseRectangulo = sc.nextInt();
+                                System.out.println("\nIntroduce la altura del rectángulo: ");
+                                alturaRectangulo = sc.nextInt();
+                                gestor.crearRectangulo(colorRectangulo, nombreRectangulo, posicionXRectangulo, posicionYRectangulo, baseRectangulo, alturaRectangulo);
                                 break;
                             case 3:
+                                System.out.flush();
+                                int radioCirculo;
+                                System.out.println(" == Creación de circulo == ");
+                                String colorCirculo = insercionColorSuper(sc);
+                                String nombreCirculo = insercionNombreSuper(sc);
+                                int posicionXCirculo = insercionXSuper(sc);
+                                int posicionYCirculo = insercionYSuper(sc);
+                                System.out.println("\nIntroduce el radio del circulo: ");
+                                radioCirculo = sc.nextInt();
+                                gestor.crearCirculo(colorCirculo, nombreCirculo, posicionXCirculo, posicionYCirculo, radioCirculo);
                                 break;
                             case 4:
+                                System.out.flush();
+                                int baseTriangulo;
+                                int alturaTriangulo;
+                                System.out.println(" == Creación de triangulo == ");
+                                String colorTriangulo = insercionColorSuper(sc);
+                                String nombreTriangulo = insercionNombreSuper(sc);
+                                int posicionXTriangulo = insercionXSuper(sc);
+                                int posicionYTriangulo = insercionYSuper(sc);
+                                System.out.println("\nIntroduce la base del triángulo: ");
+                                baseTriangulo = sc.nextInt();
+                                System.out.println("\nIntroduce la altura del triángulo: ");
+                                alturaTriangulo = sc.nextInt();
+                                gestor.crearTriangulo(colorTriangulo, nombreTriangulo, posicionXTriangulo, posicionYTriangulo, baseTriangulo, alturaTriangulo);
                                 break;
                             case 5:
                                 validoCrear = true;
@@ -133,5 +179,45 @@ public class Main {
                     System.exit(1);
             }
         }
+    }
+
+    public static String insercionColorSuper(Scanner sc){
+        String colorFigura;
+
+        System.out.println("Introduce el color de la figura: ");
+        sc.nextLine(); // Evitar recibir el texto
+        colorFigura = sc.nextLine();
+
+        return colorFigura;
+    }
+
+    public static String insercionNombreSuper(Scanner sc){
+        String nombreFigura;
+
+        System.out.println("Introduce el nombre para la figura: ");
+        sc.nextLine();
+        nombreFigura = sc.nextLine();
+
+        return nombreFigura;
+    }
+
+    public static int insercionXSuper(Scanner sc){
+        int posicionX;
+
+
+        System.out.println("Introduce la posicion X: ");
+        posicionX = sc.nextInt();
+
+        return posicionX;
+    }
+
+    public static int insercionYSuper(Scanner sc){
+        int posicionY;
+
+
+        System.out.println("Introduce la posición Y: ");
+        posicionY = sc.nextInt();
+
+        return posicionY;
     }
 }

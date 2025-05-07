@@ -113,12 +113,32 @@ public class Main {
 
                         switch (opcionEliminar){
                             case 1:
+                                int cuadradoEliminar;
+                                System.out.println(" == Eliminar cuadrado == \n");
+                                gestor.mostrarCuadrados();
+                                cuadradoEliminar = sc.nextInt();
+                                gestor.eliminarCuadrado(cuadradoEliminar);
                                 break;
                             case 2:
+                                int rectanguloEliminar;
+                                System.out.println(" == Eliminar rectángulo == \n");
+                                gestor.mostrarRectangulos();
+                                rectanguloEliminar = sc.nextInt();
+                                gestor.eliminarRectangulo(rectanguloEliminar);
                                 break;
                             case 3:
+                                int circuloEliminar;
+                                System.out.println(" == Eliminar círculo == \n");
+                                gestor.mostrarCirculos();
+                                circuloEliminar = sc.nextInt();
+                                gestor.eliminarCirculo(circuloEliminar);
                                 break;
                             case 4:
+                                int trianguloEliminar;
+                                System.out.println(" == Eliminar triángulo == \n");
+                                gestor.mostrarTriangulos();
+                                trianguloEliminar = sc.nextInt();
+                                gestor.eliminarTriangulo(trianguloEliminar);
                                 break;
                             case 5:
                                 validoEliminar = true;

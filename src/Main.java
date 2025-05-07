@@ -94,7 +94,6 @@ public class Main {
                                 validoCrear = true;
                                 break;
                         }
-                        break;
                     }
                     break;
                 case 2:
@@ -144,7 +143,6 @@ public class Main {
                                 validoEliminar = true;
                                 break;
                         }
-                        break;
                     }
                     break;
                 case 3:
@@ -174,7 +172,6 @@ public class Main {
                                 validoPerimetro = true;
                                 break;
                         }
-                        break;
                     }
                     break;
                 case 4:
@@ -186,12 +183,63 @@ public class Main {
                     System.out.println(" == Figura con mayor perímetro == ");
                     break;
                 case 6:
-                    System.out.flush();
-                    System.out.println(" == Lista de figuras == ");
+                    boolean validoListar = false;
+                    int opcionListar;
+                    while(!validoListar){
+                        System.out.flush();
+                        System.out.println(" == Lista de figuras == ");
+                        System.out.println("1. Lista de cuadrados: ");
+                        System.out.println("2. Lista de rectángulos: ");
+                        System.out.println("3. Lista de círculos: ");
+                        System.out.println("4. Lista de triángulos: ");
+
+                        opcionListar = sc.nextInt();
+
+                        switch (opcionListar){
+                            case 1:
+                                System.out.println("Lista de cuadrados: ");
+                                gestor.mostrarCuadrados();
+                                System.out.println("\nPulsa enter para volver...");
+                                sc.nextLine();
+                                sc.nextLine();
+                                break;
+                            case 2:
+                                System.out.println("Lista de rectángulos: ");
+                                gestor.mostrarRectangulos();
+                                System.out.println("\nPulsa enter para volver...");
+                                sc.nextLine();
+                                sc.nextLine();
+                                break;
+                            case 3:
+                                System.out.println("Lista de círculos: ");
+                                gestor.mostrarCirculos();
+                                System.out.println("\nPulsa enter para volver...");
+                                sc.nextLine();
+                                sc.nextLine();
+                                break;
+                            case 4:
+                                System.out.println("Lista de triángulos: ");
+                                gestor.mostrarTriangulos();
+                                System.out.println("\nPulsa enter para volver...");
+                                sc.nextLine();
+                                sc.nextLine();
+                                break;
+                            case 5:
+                                validoListar = true;
+                                break;
+                        }
+                    }
                     break;
                 case 7:
                     System.out.flush();
                     System.out.println(" == Lista de tipos de figuras == ");
+                    System.out.println("\n - Cuadrado");
+                    System.out.println(" - Rectángulo");
+                    System.out.println(" - Círculo");
+                    System.out.println(" - Triángulo");
+                    System.out.println("\nPulsa enter para volver...");
+                    sc.nextLine();
+                    sc.nextLine();
                     break;
                 case 8:
                     System.out.flush();

@@ -261,12 +261,85 @@ public class Main {
                     }
                     break;
                 case 8:
-                    System.out.println(" == Mover figura == ");
-                    System.out.println("\n 1. Mover cuadrado");
-                    System.out.println("2. Mover rectángulo");
-                    System.out.println("3. Mover círculo");
-                    System.out.println("4. Mover triángulo");
-                    System.out.println("\n 5. Volver");
+                    int opcionMover;
+                    boolean validoMover = false;
+                    while (!validoMover) {
+                        System.out.flush();
+                        System.out.println(" == Mover figura == ");
+                        System.out.println("\n1. Mover cuadrado");
+                        System.out.println("2. Mover rectángulo");
+                        System.out.println("3. Mover círculo");
+                        System.out.println("4. Mover triángulo");
+                        System.out.println("\n5. Volver");
+
+                        opcionMover = sc.nextInt();
+
+                        switch (opcionMover) {
+                            case 1:
+                                System.out.flush();
+                                System.out.println(" == Mover cuadrado == \n");
+                                gestor.mostrarCuadrados();
+                                System.out.println("Selecciona el cuadrado a mover: ");
+                                int cuadradoMover = sc.nextInt();
+                                System.out.println("Introduce nueva posición X: ");
+                                int nuevaXCuadrado = sc.nextInt();
+                                System.out.println("Introduce nueva posición Y: ");
+                                int nuevaYCuadrado = sc.nextInt();
+                                gestor.moverCuadrado(cuadradoMover, nuevaXCuadrado, nuevaYCuadrado);
+                                System.out.println("\nPulsa enter para volver...");
+                                sc.nextLine();
+                                sc.nextLine();
+                                break;
+                            case 2:
+                                System.out.flush();
+                                System.out.println(" == Mover rectángulo == \n");
+                                gestor.mostrarRectangulos();
+                                System.out.println("Selecciona el rectángulo a mover: ");
+                                int rectanguloMover = sc.nextInt();
+                                System.out.println("Introduce nueva posición X: ");
+                                int nuevaXRectangulo = sc.nextInt();
+                                System.out.println("Introduce nueva posición Y: ");
+                                int nuevaYRectangulo = sc.nextInt();
+                                gestor.moverRectangulo(rectanguloMover, nuevaXRectangulo, nuevaYRectangulo);
+                                System.out.println("\nPulsa enter para volver...");
+                                sc.nextLine();
+                                sc.nextLine();
+                                break;
+                            case 3:
+                                System.out.flush();
+                                System.out.println(" == Mover círculo == \n");
+                                gestor.mostrarCirculos();
+                                System.out.println("Selecciona el círculo a mover: ");
+                                int circuloMover = sc.nextInt();
+                                System.out.println("Introduce nueva posición X: ");
+                                int nuevaXCirculo = sc.nextInt();
+                                System.out.println("Introduce nueva posición Y: ");
+                                int nuevaYCirculo = sc.nextInt();
+                                gestor.moverCirculo(circuloMover, nuevaXCirculo, nuevaYCirculo);
+                                System.out.println("\nPulsa enter para volver...");
+                                sc.nextLine();
+                                sc.nextLine();
+                                break;
+                            case 4:
+                                System.out.flush();
+                                System.out.println(" == Mover triángulo == \n");
+                                gestor.mostrarTriangulos();
+                                System.out.println("Selecciona el triángulo a mover: ");
+                                int trianguloMover = sc.nextInt();
+                                System.out.println("Introduce nueva posición X: ");
+                                int nuevaXTriangulo = sc.nextInt();
+                                System.out.println("Introduce nueva posición Y: ");
+                                int nuevaYTriangulo = sc.nextInt();
+                                gestor.moverTriangulo(trianguloMover, nuevaXTriangulo, nuevaYTriangulo);
+                                System.out.println("\nPulsa enter para volver...");
+                                sc.nextLine();
+                                sc.nextLine();
+                                break;
+                            case 5:
+                                validoMover = true;
+                                break;
+                        }
+                    }
                     break;
                 case 9:
                     System.out.flush();

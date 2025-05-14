@@ -187,4 +187,32 @@ public class Gestor {
         System.out.println("El triángulo con el mayor perímetro es: \n");
         System.out.println(trianguloLista.getLast());
     }
+
+    public void moverCuadrado(int indice, int nuevaX, int nuevaY){
+            Cuadrado c = cuadradoLista.get(indice);
+            c.setPosX(nuevaX);
+            c.setPosY(nuevaY);
+            System.out.println("Cuadrado movido a nuevas coordenadas: X=" + nuevaX + ", Y=" + nuevaY);
+    }
+
+    public void moverRectangulo(int indice, int nuevaX, int nuevaY){
+            Rectangulo r = rectanguloLista.get(indice);
+            r.setPosX(nuevaX);
+            r.setPosY(nuevaY);
+            System.out.println("Rectángulo movido a nuevas coordenadas: X=" + nuevaX + ", Y=" + nuevaY);
+    }
+
+    public void moverCirculo(int indice, int nuevaX, int nuevaY){
+            Circulo c = circuloLista.get(indice);
+            c.setPosX(nuevaX);
+            c.setPosY(nuevaY);
+            System.out.println("Círculo movido a nuevas coordenadas: X=" + nuevaX + ", Y=" + nuevaY);
+    }
+
+    public void moverTriangulo(int indice, int nuevaX, int nuevaY){
+            Triangulo t = trianguloLista.get(indice);
+            t.setPosX(nuevaX);
+            t.setPosY(nuevaY);
+            System.out.println("Triángulo movido a nuevas coordenadas: X=" + nuevaX + ", Y=" + nuevaY);
+    }
 }
